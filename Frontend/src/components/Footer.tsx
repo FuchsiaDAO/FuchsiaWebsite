@@ -31,11 +31,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-fuchsia-primary to-neon-purple rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">F</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img 
+                  src="/fuchsia-glyph.svg" 
+                  alt="Fuchsia DAO Logo" 
+                  className="w-8 h-8 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(232,121,249,0.5)]"
+                />
               </div>
-              <span className="font-orbitron font-bold text-2xl bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
+              <span className="font-londrina font-bold text-2xl bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
                 Fuchsia DAO
               </span>
             </div>
@@ -61,7 +65,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-orbitron font-semibold text-lg mb-4 text-fuchsia-primary">
+            <h3 className="font-londrina font-semibold text-lg mb-4 text-fuchsia-primary">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -80,7 +84,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="font-orbitron font-semibold text-lg mb-4 text-fuchsia-primary">
+            <h3 className="font-londrina font-semibold text-lg mb-4 text-fuchsia-primary">
               Resources
             </h3>
             <ul className="space-y-2">

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SimpleNavbar from './components/SimpleNavbar';
+import NounsNavbar from './components/NounsNavbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,14 +11,15 @@ import Governance from './pages/Governance';
 import Community from './pages/Community';
 import Blog from './pages/Blog';
 import Docs from './pages/Docs';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-dark-bg text-white">
-        <div className="neon-grid fixed inset-0 opacity-30"></div>
-        <div className="relative z-10">
-          <SimpleNavbar />
+        <div className="relative">
+          <NounsNavbar />
           <main>
             <Routes>
               <Route path="/" element={<Home />} />

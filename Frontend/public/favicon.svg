@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fuchsiaGradientSmall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e879f9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f472b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e879f9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Eye of Ra/Horus Fuchsia Glyph - Simplified for small size -->
+  <g fill="url(#fuchsiaGradientSmall)" stroke="none">
+    <!-- Upper eyelid curve -->
+    <path d="M6 13 Q16 8 26 13" stroke="url(#fuchsiaGradientSmall)" stroke-width="2" fill="none"/>
+    
+    <!-- Lower eyelid curve -->
+    <path d="M6 13 Q11 18 16 16 Q21 18 26 13" stroke="url(#fuchsiaGradientSmall)" stroke-width="2" fill="none"/>
+    
+    <!-- Eye center -->
+    <circle cx="16" cy="13" r="3" fill="url(#fuchsiaGradientSmall)"/>
+    
+    <!-- Tear line -->
+    <path d="M6 13 Q4 16 3 20 Q3 22 4 24 Q6 25 7 24 Q7 22 6 18" stroke="url(#fuchsiaGradientSmall)" stroke-width="1.5" fill="none"/>
+    
+    <!-- Vertical line -->
+    <rect x="15.5" y="22" width="1" height="6" fill="url(#fuchsiaGradientSmall)"/>
+    
+    <!-- Bottom cross -->
+    <rect x="14" y="27" width="4" height="1" fill="url(#fuchsiaGradientSmall)"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fuchsiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e879f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Eye of Ra/Horus Fuchsia Glyph -->
+  <g fill="url(#fuchsiaGradient)" stroke="none">
+    <!-- Upper eyelid -->
+    <path d="M50 70 Q100 40 150 70 Q130 60 100 60 Q70 60 50 70 Z"/>
+    
+    <!-- Lower curved line -->
+    <path d="M50 70 Q70 90 100 85 Q130 90 150 70"/>
+    
+    <!-- Eye outline -->
+    <ellipse cx="100" cy="75" rx="50" ry="15" fill="none" stroke="url(#fuchsiaGradient)" stroke-width="3"/>
+    
+    <!-- Iris/Pupil -->
+    <circle cx="100" cy="75" r="8" fill="url(#fuchsiaGradient)"/>
+    <polygon points="100,67 108,75 100,83 92,75" fill="url(#fuchsiaGradient)"/>
+    
+    <!-- Tear line -->
+    <path d="M50 70 Q45 90 40 110 Q42 115 45 118 Q50 120 55 115 Q52 110 50 100 Q48 85 50 70"/>
+    
+    <!-- Spiral curl -->
+    <path d="M40 110 Q35 115 32 120 Q30 125 32 130 Q35 135 40 133 Q42 130 40 127 Q38 125 39 123"/>
+    
+    <!-- Vertical line down */
+    <rect x="98" y="118" width="4" height="25" fill="url(#fuchsiaGradient)"/>
+    
+    <!-- Bottom horizontal element -->
+    <rect x="95" y="140" width="10" height="4" fill="url(#fuchsiaGradient)"/>
+  </g>
+</svg>

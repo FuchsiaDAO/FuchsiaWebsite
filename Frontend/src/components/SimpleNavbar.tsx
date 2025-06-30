@@ -40,7 +40,7 @@ const SimpleNavbar = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-fuchsia-primary to-neon-purple rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">F</span>
             </div>
-            <span className="font-orbitron font-bold text-xl bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
+            <span className="font-londrina font-bold text-xl bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
               Fuchsia DAO
             </span>
           </Link>
@@ -51,7 +51,7 @@ const SimpleNavbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative font-inter font-medium transition-colors duration-200 ${
+                className={`relative font-londrina font-medium transition-colors duration-200 ${
                   location.pathname === item.path
                     ? 'text-fuchsia-primary'
                     : 'text-gray-300 hover:text-fuchsia-primary'
@@ -96,7 +96,7 @@ const SimpleNavbar = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-2 font-inter font-medium transition-colors duration-200 ${
+                  className={`block py-2 font-londrina font-medium transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'text-fuchsia-primary'
                       : 'text-gray-300 hover:text-fuchsia-primary'

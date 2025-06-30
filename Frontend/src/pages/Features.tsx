@@ -129,7 +129,7 @@ const Features = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="font-orbitron font-bold text-5xl md:text-7xl mb-6">
+            <h1 className="font-londrina font-bold text-5xl md:text-7xl mb-6">
               <span className="bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
                 What We Do
               </span>
@@ -149,10 +149,10 @@ const Features = () => {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-orbitron font-bold bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent mb-2">
+                <div className="text-3xl md:text-4xl font-londrina font-bold bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-400 font-inter">{stat.label}</div>
+                <div className="text-gray-400 font-londrina">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -178,7 +178,7 @@ const Features = () => {
                   <div className={`text-6xl mb-6 bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
                     {feature.icon}
                   </div>
-                  <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4">
+                  <h2 className="font-londrina font-bold text-4xl md:text-5xl mb-4">
                     {feature.title}
                   </h2>
                   <p className="text-xl text-fuchsia-primary mb-4 font-semibold">
@@ -248,7 +248,7 @@ const Features = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
+            <h2 className="font-londrina font-bold text-4xl md:text-5xl mb-6">
               <span className="bg-gradient-to-r from-fuchsia-primary to-neon-purple bg-clip-text text-transparent">
                 Complete DAO Toolkit
               </span>
@@ -269,7 +269,7 @@ const Features = () => {
                 className="bg-dark-card/50 backdrop-blur-sm border border-fuchsia-primary/20 rounded-xl p-6 hover:border-fuchsia-primary/40 transition-all duration-300"
               >
                 <div className="text-fuchsia-primary mb-4">{tool.icon}</div>
-                <h3 className="font-orbitron font-semibold text-xl mb-3">{tool.title}</h3>
+                <h3 className="font-londrina font-semibold text-xl mb-3">{tool.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{tool.description}</p>
               </motion.div>
             ))}
@@ -286,7 +286,7 @@ const Features = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
+            <h2 className="font-londrina font-bold text-4xl md:text-5xl mb-6">
               Ready to <span className="text-fuchsia-primary">Build Your DAO</span>?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

@@ -1,0 +1,53 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fuchsiaGradientLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e879f9;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f472b6;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e879f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c4b5fd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fuchsiaGradientDarkLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4b5fd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e879f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background circle -->
+  <circle cx="256" cy="256" r="240" fill="#1a1a2e" stroke="url(#fuchsiaGradientLarge)" stroke-width="8"/>
+  
+  <!-- Eye of Ra/Horus Fuchsia Glyph -->
+  <g fill="url(#fuchsiaGradientLarge)" stroke="none" filter="url(#glow)">
+    <!-- Upper eyelid curve -->
+    <path d="M130 220 Q256 140 382 220 Q340 185 256 185 Q172 185 130 220 Z" stroke="url(#fuchsiaGradientLarge)" stroke-width="10" fill="none"/>
+    
+    <!-- Lower eyelid curve -->
+    <path d="M130 220 Q190 280 256 260 Q322 280 382 220" stroke="url(#fuchsiaGradientLarge)" stroke-width="10" fill="none"/>
+    
+    <!-- Eye center (iris) -->
+    <circle cx="256" cy="220" r="30" fill="url(#fuchsiaGradientDarkLarge)"/>
+    
+    <!-- Hexagonal pupil -->
+    <polygon points="256,200 271,215 271,225 256,240 241,225 241,215" fill="url(#fuchsiaGradientLarge)"/>
+    
+    <!-- Tear/marking extending down -->
+    <path d="M130 220 Q115 260 100 320 Q95 340 105 365 Q118 390 135 380 Q145 370 135 350 Q125 315 130 260" stroke="url(#fuchsiaGradientLarge)" stroke-width="10" fill="none"/>
+    
+    <!-- Spiral curl at bottom of tear -->
+    <path d="M100 320 Q85 330 75 350 Q65 375 80 390 Q100 405 120 390 Q135 375 120 360 Q110 350 115 345 Q120 340 115 343" stroke="url(#fuchsiaGradientLarge)" stroke-width="8" fill="none"/>
+    
+    <!-- Vertical line extending down from eye -->
+    <rect x="251" y="370" width="10" height="90" fill="url(#fuchsiaGradientLarge)" rx="5"/>
+    
+    <!-- Bottom horizontal cross element -->
+    <rect x="230" y="450" width="52" height="10" fill="url(#fuchsiaGradientLarge)" rx="5"/>
+    <rect x="251" y="430" width="10" height="50" fill="url(#fuchsiaGradientLarge)" rx="5"/>
+  </g>
+</svg>

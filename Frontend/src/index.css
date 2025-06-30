@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Audiowide:wght@400&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Cyberpunk color palette inspired by Nouns aesthetic */
+  --fuchsia-primary: #FF3CAC;
+  --neon-purple: #7B2FF7;
+  --electric-blue: #00E5FF;
+  --cyber-green: #39FF14;
+  --warning-orange: #FF6B35;
+  --dark-bg: #0A0A0A;
+  --dark-surface: #111111;
+  --dark-card: #1A1A1A;
+  --dark-border: rgba(255, 60, 172, 0.2);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --text-muted: #666666;
 }
 
 * {
@@ -17,41 +32,100 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0A0A0A;
-  color: #ffffff;
+  font-family: 'Londrina Solid', 'Space Grotesk', 'Inter', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Cyberpunk themed */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: var(--dark-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #FF3CAC, #7B2FF7);
-  border-radius: 4px;
+  background: linear-gradient(45deg, var(--fuchsia-primary), var(--neon-purple));
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #7B2FF7, #00E5FF);
+  background: linear-gradient(45deg, var(--neon-purple), var(--electric-blue));
 }
 
-/* Neon grid background */
-.neon-grid {
-  background-image: 
-    linear-gradient(rgba(255, 60, 172, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 60, 172, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
+/* Nouns-inspired layouts with cyberpunk aesthetics */
+@layer components {
+  .hero-section {
+    @apply min-h-screen flex items-center justify-center relative overflow-hidden;
+    background: radial-gradient(ellipse at center, rgba(123, 47, 247, 0.1) 0%, transparent 70%);
+  }
+  
+  .container-base {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+  
+  .card-base {
+    @apply bg-dark-card border border-gray-800 rounded-2xl p-6 transition-all duration-300;
+    @apply hover:border-fuchsia-primary/40 hover:shadow-lg hover:shadow-fuchsia-primary/10;
+  }
+  
+  .card-highlight {
+    @apply bg-gradient-to-br from-dark-card to-dark-surface;
+    @apply border border-fuchsia-primary/30 shadow-lg shadow-fuchsia-primary/20;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-fuchsia-primary to-neon-purple;
+    @apply text-white font-semibold rounded-xl transition-all duration-300;
+    @apply hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-primary/40;
+    @apply active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 bg-dark-card border border-fuchsia-primary/40;
+    @apply text-fuchsia-primary font-semibold rounded-xl transition-all duration-300;
+    @apply hover:bg-fuchsia-primary hover:text-white hover:scale-105;
+  }
+  
+  .btn-ghost {
+    @apply px-6 py-3 text-gray-300 font-medium rounded-lg transition-all duration-200;
+    @apply hover:text-fuchsia-primary hover:bg-fuchsia-primary/10;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-fuchsia-primary via-neon-purple to-electric-blue;
+    @apply bg-clip-text text-transparent;
+  }
+  
+  .heading-xl {
+    @apply font-londrina font-bold text-5xl md:text-6xl lg:text-7xl leading-tight;
+  }
+  
+  .heading-lg {
+    @apply font-londrina font-bold text-3xl md:text-4xl lg:text-5xl leading-tight;
+  }
+  
+  .heading-md {
+    @apply font-londrina font-semibold text-2xl md:text-3xl leading-tight;
+  }
+  
+  .body-lg {
+    @apply text-lg md:text-xl text-gray-300 leading-relaxed;
+  }
+  
+  .body-base {
+    @apply text-base text-gray-300 leading-relaxed;
+  }
 }
 
-/* Glitch effect */
+/* Glitch effect - Enhanced for cyberpunk theme */
 .glitch {
   position: relative;
+  display: inline-block;
 }
 
 .glitch::before,
@@ -62,17 +136,18 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background: inherit;
 }
 
 .glitch::before {
-  animation: glitch-1 0.5s infinite;
-  color: #FF3CAC;
+  animation: glitch-1 0.8s infinite;
+  color: var(--fuchsia-primary);
   z-index: -1;
 }
 
 .glitch::after {
-  animation: glitch-2 0.5s infinite;
-  color: #00E5FF;
+  animation: glitch-2 0.8s infinite;
+  color: var(--electric-blue);
   z-index: -2;
 }
 
@@ -81,10 +156,10 @@ body {
     transform: translate3d(0, 0, 0);
   }
   1%, 13% {
-    transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 1px, 0);
   }
   16%, 48% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, -1px, 0);
   }
 }
 
@@ -93,26 +168,114 @@ body {
     transform: translate3d(0, 0, 0);
   }
   1%, 19% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 1px, 0);
   }
   22%, 61% {
-    transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, -1px, 0);
   }
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Nouns-inspired geometric shapes with cyberpunk glow */
+.cyber-shape {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.cyber-shape-1 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--fuchsia-primary);
+  border-radius: 50%;
+  animation: float-1 8s ease-in-out infinite;
+}
+
+.cyber-shape-2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, var(--neon-purple), var(--electric-blue));
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: float-2 6s ease-in-out infinite;
+}
+
+.cyber-shape-3 {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--electric-blue);
+  transform: rotate(45deg);
+  animation: float-3 10s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: rotate(45deg) translateY(0px); }
+  50% { transform: rotate(225deg) translateY(-10px); }
+}
+
+/* Glow effects inspired by Nouns but cyberpunk themed */
+.glow-fuchsia {
+  box-shadow: 0 0 20px rgba(255, 60, 172, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(123, 47, 247, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* Animated background grid - subtle like Nouns but cyberpunk */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(255, 60, 172, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 60, 172, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+/* Focus states for accessibility */
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--fuchsia-primary);
+  outline-offset: 2px;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--fuchsia-primary);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--fuchsia-primary);
+  color: white;
+}
+
+/* Loading animations */
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 60, 172, 0.4);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  50% {
+    box-shadow: 0 0 30px rgba(255, 60, 172, 0.8);
   }
 }
